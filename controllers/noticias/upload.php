@@ -14,14 +14,14 @@ $carpetaASubir = "uploads/";
 $rutaFinal = $carpetaASubir . $_FILES["imagen"]["name"];
 
 if (move_uploaded_file($_FILES["imagen"]["tmp_name"], $rutaFinal)) {
-    echo "Archivo subido correctamente";
         $sql = "INSERT INTO noticias (titulo, descripcion, texto, id_categoria, id_usuario, imagen) VALUES (?, ?, ?, ?, ?, ?)";
         
         $stmt = $conn->prepare($sql);
         $stmt->bind_param("sssiis", $titulo, $descripcion, $texto, $id_categoria, $id_usuario, $rutaFinal);
         $stmt->execute();   
         $stmt->close();
-
+        header("Location:   ../../views/noticias/listadoNoticias.php");
+        exit();
     } else {
         echo "Error al subir el archivo";
     }

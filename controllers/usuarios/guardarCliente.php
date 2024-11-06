@@ -5,7 +5,7 @@ $nombre = $_POST["nombre"];
 $apellido = $_POST["apellido"];
 $email = $_POST["email"];
 $password = $_POST["password"];
-$id_rol = 2;
+$id_rol = 3;
 
 //  Consulta
 $query = $conn->prepare("INSERT INTO usuarios (nombre, apellido, email, password, rol) VALUES (?, ?, ? ,?, ?)");

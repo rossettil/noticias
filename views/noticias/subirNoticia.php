@@ -11,7 +11,7 @@ include("../../controllers/session/validacionSession.php");
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="../../styles/style.css?v=2">
+    <link rel="stylesheet" href="../../styles/style.css?v=1">
 </head>
 <body>
     <?php include("../../includes/navbar.php") ?>
@@ -29,7 +29,7 @@ include("../../controllers/session/validacionSession.php");
             <textarea name="descripcion" id="descripcion" class="form-control input-subirNoticia" placeholder="Describe la noticia completa"></textarea>
         </div>
         <div class="mb-3">
-            <label for="categoria" class="form-label">Descripcion de la noticia</label>
+            <label for="categoria" class="form-label">Categoria de la noticia</label>
             <select id="categoria" name="categoria" class="form-select input-subirNoticia" aria-label="Floating label select example">
                 <option class="input-subirNoticia" selected>Selecciona una categoria</option>
                 <option class="input-subirNoticia" value="1">Accidentes</option>
@@ -48,6 +48,7 @@ include("../../controllers/session/validacionSession.php");
         <input type="hidden" name="id_oculto" id="id_oculto" value="<?php echo $_SESSION['id'];?>">
         <input type="submit" value="Subir noticia" class="btn-subirNoticia">
     </form>
+    <?php include("../../includes/footer.php"); ?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>
 </html>
